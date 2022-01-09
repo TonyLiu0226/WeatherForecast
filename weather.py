@@ -12,8 +12,8 @@ def forecast(city):
         b4 = BeautifulSoup(data, 'lxml')
 
         #prints out the current temperature
-        gay = b4.find_all('div')
-        if len(gay) == 0:
+        g = b4.find_all('div')
+        if len(g) == 0:
             raise Exception("Invalid city entered")
 
         currentTemp = b4.find('div', attrs={'class': 'BNeawe iBp4i AP7Wnd'}).text
@@ -22,7 +22,7 @@ def forecast(city):
         print("The weather for " + city + ": " + currentTime + ". Temperature: " +currentTemp)
         print("Your 3 day forecast is: " +forecast)
         #prints out the current weather condition
-        print(gay)
+        print(g)
     
         #prints out the weather and temperature for today
 
