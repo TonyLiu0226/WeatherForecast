@@ -6,7 +6,7 @@ from datetime import datetime
 def forecast(city):
 
     try:
-        url = "https://www.google.com/search?q="+"weather"+city
+        url = f"https://www.google.com/search?q=weather {city}" 
 
         data = requests.get(url).content
         b4 = BeautifulSoup(data, 'lxml')
